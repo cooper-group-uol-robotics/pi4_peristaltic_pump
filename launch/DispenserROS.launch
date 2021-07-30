@@ -1,0 +1,3 @@
+<launch>
+	<node name="DispenserROS" pkg="peristaltic_dispenser_driver" type="DispenserROS" /> 	
+</launch>

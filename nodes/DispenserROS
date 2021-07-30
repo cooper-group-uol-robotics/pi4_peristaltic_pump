@@ -1,0 +1,13 @@
+#!/usr/bin/env python
+
+#Script to use the Fisher Scientific PPS4102 Top Pan balance in ROS
+
+import rospy
+from peristaltic_dispenser_driver.DispenserDriverROS import DispDriverROS
+            
+if __name__ == "__main__": #Object oriented initialization for ROS
+    rospy.init_node("dispenser_driver", anonymous=True) #initialize rospy node
+    dispenser_ROS = DispDriverROS() #Create instance of ROS Wrapper
+    rospy.on_shutdown(dispenser_ROS.reset) #Turn off scale when driver is turned off
+    rospy.loginfo("Dispenser driver started")
+    rospy.spin()
