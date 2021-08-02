@@ -89,7 +89,7 @@ class DispDriverROS:
         rospy.loginfo("Dispensing for " + str(dispTime) + " seconds at Speed: " + str(speed))
         
     def dispenseReverse(self, speed, dispTime):
-        self.dispenser.dispendseReverse(speed, dispTime)
+        self.dispenser.dispenseReverse(speed, dispTime)
         rospy.loginfo("Dispensing in Reverse for " + str(dispTime) + " seconds at Speed: " + str(speed))
     
     #callback from receiving weight from balance. Updates corresponding variable.
