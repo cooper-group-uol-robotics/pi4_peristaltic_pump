@@ -1,23 +1,19 @@
-# fisherbrand_pps4102_balance
-#### ROS Driver for Fisher Scientific PPS4102 Top Pan Balance
-#### Uses RS232-USB adapter for serial communication
+# pi4_peristaltic_pump
+#### ROS Driver for a custom liquid dispenser using a peristaltic pump, a DAC and a relay
+#### Controlled by a RPi 4
 ##### Written by Jakub Glowacki
 
 ## How to Launch
 The easiest way to launch the package is with roslaunch:
 ```
-roslaunch fisherbrand_pps4102_balance FisherROS.launch
+roslaunch peristaltic_dispenser_driver DriverROS.launch
 ```
 Alternatively, can be launched using rosrun:
 ```
-rosrun fisherbrand_pps4102_balance FisherBalanceROS
+rosrun peristaltic_dispenser_driver DispenserDriverROS
 ```
 
-## Balance Serial Settings:
-Baud Rate: 9600\
-Parity: None\
-Bits: 8\
-No Handshake
+## TODO: Update README
 
 ## ROS Topics:
 Balance_Commands | For publishing commands to\
