@@ -7,7 +7,9 @@ int32 DISPENSEINDEF = 4
 int32 DISPENSEINDEFREV = 5
 int32 DISPENSE = 6
 int32 DISPENSEREV = 7
+int32 DISPENSEPID = 8
 
 int32 dispenser_command
 float32 dispenser_speed
 int32 dispenser_time
+float32 dispenser_ml
