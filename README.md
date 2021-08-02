@@ -3,6 +3,9 @@
 #### as well as a top pan balance (controlled by kern_pcb_driver ROS driver) used for PID controlled liquid dispensing.
 ##### Written by Jakub Glowacki
 
+## Dependencies
+Two specific dependencies are required for this to run that cannot be automatically resolved by rosdep. Those are **simple-pid** and **adafruit-circuitpython-mcp4725** both can be installed using either pip (if python 3 is the default environment) or pip3. 
+
 ## How to Launch
 The easiest way to launch the package is with roslaunch:
 ```
