@@ -21,7 +21,6 @@
   <build_export_depend>std_msgs</build_export_depend>
   <exec_depend>rospy</exec_depend>
   <exec_depend>std_msgs</exec_depend>
-  <exec_depend>kern_pcb_balance</exec_depend>
   <exec_depend>simple-pid</exec_depend>
   <exec_depend>roslaunch</exec_depend>
   <export>
