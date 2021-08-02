@@ -5,6 +5,7 @@
 
 ## Dependencies
 Two specific dependencies are required for this to run that cannot be automatically resolved by rosdep. Those are **simple-pid** and **adafruit-circuitpython-mcp4725** both can be installed using either pip (if python 3 is the default environment) or pip3. 
+The kern_pcb_driver ROS package must also be present as it needs to run alongside this driver.
 
 ## How to Launch
 The easiest way to launch the package is with roslaunch:
