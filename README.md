@@ -4,18 +4,21 @@
 ##### Written by Jakub Glowacki
 
 ## Dependencies
-Two specific dependencies are required for this to run that cannot be automatically resolved by rosdep. Those are **simple-pid** and **adafruit-circuitpython-mcp4725** both can be installed using either pip (if python 3 is the default environment) or pip3. 
-The kern_pcb_driver ROS package must also be present as it needs to run alongside this driver.
+Three specific dependencies are required for this to run that cannot be automatically resolved by rosdep. Those are **simple-pid** and **adafruit-circuitpython-mcp4725** both can be installed using either pip (if python 3 is the default environment) or pip3. 
+Moreover, the **kern_pcb_balance** ROS package must also be present as it needs to run alongside this driver. This package can be found [here](https://github.com/cooper-group-uol-robotics/kern_pcb_balance)
 
 ## How to Launch
 The easiest way to launch the package is with roslaunch:
 ```
-roslaunch peristaltic_dispenser_driver DriverROS.launch
+roslaunch peristaltic_dispenser_driver DriverROS.launch kern_serial_port:=<port_name>
 ```
+This will launch the driver assuming Kern balance is connected to the provided serial port. If no serial port argument is provided, the default port '/dev/ttyUSB0' will be used.
+
 Alternatively, can be launched using rosrun:
 ```
-rosrun peristaltic_dispenser_driver DispenserDriverROS
+rosrun peristaltic_dispenser_driver DispenserDriverROS <kern_serial_port>
 ```
+Similarly, if no serial port argument is provided, the serial port '/dev/ttyUSB0' is used.
 
 ## ROS Topics:
 Dispenser_Commands | For publishing commands to\

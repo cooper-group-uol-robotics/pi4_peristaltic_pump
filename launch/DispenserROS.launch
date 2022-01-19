@@ -1,3 +1,4 @@
 <launch>
-	<node name="DispenserROS" pkg="peristaltic_dispenser_driver" type="DispenserROS" /> 	
+	<arg name="kern_serial_port" default="/dev/ttyUSB0" />
+	<node name="DispenserROS" pkg="peristaltic_dispenser_driver" type="DispenserROS" args="$(arg kern_serial_port)" output="screen"/> 	
 </launch>
