@@ -1,0 +1,4 @@
+<launch>
+	<arg name="kern_serial_port" default="/dev/ttyUSB0" />
+	<node name="perstaltic_pump_driver" pkg="pi4_peristaltic_pump_driver" type="perstaltic_pump_driver" args="$(arg kern_serial_port)" output="screen"/> 	
+</launch>

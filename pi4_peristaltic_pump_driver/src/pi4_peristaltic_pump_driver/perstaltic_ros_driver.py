@@ -10,10 +10,10 @@ import math #Used for weight tolerance
 import time
 import sys
 import std_msgs.msg
-from kern_pcb_balance.msg import KernReading, KernCommand #weight reading from balance
-from kern_pcb_balance.KernDriverSerial import KernDriver
-from peristaltic_dispenser_driver.DispenserDriver import DispenserDriver
-from peristaltic_dispenser_driver.msg import DispenserCommand
+from kern_pcb_balance_msgs.msg import KernReading, KernCommand #weight reading from balance
+from kern_pcb_balance_driver.kern_serial_driver import KernDriver
+from pi4_peristaltic_pump_driver.perstaltic_serial_driver import DispenserDriver
+from pi4_peristaltic_pump_msgs.msg import DispenserCommand
 from simple_pid import PID #PID control library
 class DispDriverROS:
     def __init__(self, kern_serial_port):
